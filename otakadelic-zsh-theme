@@ -1,15 +1,12 @@
-# File: otakadelic.z-theme
-
-autoload -Uz add-zsh-hook colors vcs_info
-colors
-
-zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' unstagedstr '!'
-zstyle ':vcs_info:*' stagedstr '+'
-zstyle ':vcs_info:git*' formats "%{${fg[cyan]}%}[%{${fg[blue]}%}%b%{${fg[yellow]}%}%m%u%c%{${fg[cyan]}%}]%{$reset_color%}"
-
+#
+# otakadelic theme
+#
+#
+# name of venv is compatible with uv and -m venv.
+#
 _prompt_otakadelic_pwd() {
+
+    local venv_name
     if [[ -n "$VIRTUAL_ENV" ]]; then
         local venv_name="${VIRTUAL_ENV:t}"
         if [[ "$venv_name" == ".venv" ]]; then
@@ -36,11 +33,3 @@ local user_color="%(!.%B%F{red}.%B%F{blue})"
 
 PS1="%(?..%B%F{red}%? %f%b)${user_color}%n%f%b%B@%b%B%F{yellow}%m%f%b \${VENV_PROMPT}\${vcs_info_msg_0_}%F{green}%# %f"
 RPS1="%(?..%B%F{red}:(%f%b )%B%F{yellow}%40<..<%d%<< %f%b"
-
-#
-# how to use this theme(zimfw only)
-# 
-# add one line prompt part of .zimrc
-#
-#  zmodule otakadelic/otakadelic-zimfw-theme
-# 
