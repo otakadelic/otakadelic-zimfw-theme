@@ -4,5 +4,5 @@ How to use this theme(zimfw only)
 
 Add one line prompt part of .zimrc
 ```
-zmobule otakadelic/otakadelic-zimfw-theme
+zmodule otakadelic/otakadelic-zimfw-theme
 ```
