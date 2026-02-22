@@ -40,5 +40,5 @@ RPS1="%(?..%B%F{red}:(%f%b )%B%F{yellow}%40<..<%d%<< %f%b"
 # 
 # add one line prompt part of .zimrc
 #
-#  zmobule otakadelic-zimfw-theme
+#  zmodule otakadelic-zimfw-theme
 # 
